@@ -4,13 +4,13 @@ import { TbPointFilled } from "react-icons/tb";
 
 const IncomeCard = () => {
 	return (
-		<div className="card w-[390px] h-[220px] rounded-2xl bg-base-100 shadow-xl p-0">
+		<div className="card w-[390px] h-[220px] rounded-2xl bg-base-100 p-0">
 			<div className="card-body h-12 flex flex-col gap-5 ">
 				<div className="flex border-b-2 items-center  h-12 pt-4 px-6">
 					<TbPointFilled color="green" />
 					<h2 className="card-title ">Your Income </h2>
 				</div>
-				<h1 className="font-semibold text-3xl">190,200,000$</h1>
+				<h1 className="font-semibold text-3xl"></h1>
 				<span className="text-slate-500">Your Income Account</span>
 				<div className="flex items-end  ">
 					<FaArrowAltCircleUp color="green" size={20} className="mr-2" />
