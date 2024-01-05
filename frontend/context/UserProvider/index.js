@@ -38,7 +38,7 @@ const UserProvider = ({ children }) => {
 
 		try {
 			setLoading(true);
-			const { data } = await myAxios.post("BASE_API_URL/auth/signin", {
+			const { data } = await myAxios.post("/auth/signin", {
 				userEmail: formUserData.email,
 				userPassword: formUserData.password,
 			});
@@ -75,7 +75,7 @@ const UserProvider = ({ children }) => {
 		}
 
 		try {
-			const { data } = await myAxios.post("BASE_API_URL/auth/signup", {
+			const { data } = await myAxios.post("/auth/signup", {
 				email: formUserData.email,
 				password: formUserData.password,
 				name: formUserData.name,
