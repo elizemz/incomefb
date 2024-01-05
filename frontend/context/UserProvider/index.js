@@ -1,4 +1,4 @@
-import axios from "axios";
+import myAxios from "@/utils/axios";
 import React, { createContext, useState } from "react";
 import { toast } from "react-toastify";
 import { useRouter } from "next/router";
@@ -38,10 +38,13 @@ const UserProvider = ({ children }) => {
 
 		try {
 			setLoading(true);
-			const { data } = await axios.post("http://localhost:8008/auth/signin", {
-				userEmail: formUserData.email,
-				userPassword: formUserData.password,
-			});
+			const { data } = await myAxios.post(
+				"NEXT_PUBLIC_BACKEND_URL/auth/signin",
+				{
+					userEmail: formUserData.email,
+					userPassword: formUserData.password,
+				}
+			);
 			console.log("DDD++++++>", data.user);
 			setUser(data.user);
 			router.push("/");
@@ -75,11 +78,14 @@ const UserProvider = ({ children }) => {
 		}
 
 		try {
-			const { data } = await axios.post("http://localhost:8008/auth/signup", {
-				email: formUserData.email,
-				password: formUserData.password,
-				name: formUserData.name,
-			});
+			const { data } = await myAxios.post(
+				"NEXT_PUBLIC_BACKEND_URL/auth/signup",
+				{
+					email: formUserData.email,
+					password: formUserData.password,
+					name: formUserData.name,
+				}
+			);
 			console.log(data);
 			setUser(data.user);
 			router.push("/signupstep");
