@@ -11,7 +11,7 @@ const Record = ({ transaction }) => {
 					{getIcons(transaction?.iconname, "white")}
 				</div>
 				<div className="ml-3">
-					<h2 className="font-medium">{transaction?.name}</h2>
+					<h2 className="font-medium">{transaction?.transaction_name}</h2>
 					<h3 className="text-gray-500 text-xs">{transaction?.created_at}</h3>
 				</div>
 			</div>
