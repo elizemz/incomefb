@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 import UserProvider from "@/context/UserProvider";
 import React from "react";
-import { ToastContainer } from "react-toastify";
+// import { ToastContainer } from "react-toastify";
 import { StepProvider } from "@/context/StepProvider";
 import TransactionProvider from "@/context/TransactionProvider";
 import { ThemeProvider } from "@/context/ThemeProvider";
@@ -15,7 +15,6 @@ export default function App({ Component, pageProps }) {
 					<CategoryProvider>
 						<TransactionProvider>
 							<Component {...pageProps} />
-							<ToastContainer />
 						</TransactionProvider>
 					</CategoryProvider>
 				</StepProvider>
