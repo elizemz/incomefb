@@ -1,5 +1,5 @@
+import BottomSection from "@/components/dashboard/BottomSection";
 import MiddleSection from "@/components/dashboard/MiddleSection";
-
 import TopSection from "@/components/dashboard/TopSection";
 import Navbar from "@/components/Navbar";
 import { UserContext } from "@/context/UserProvider";
@@ -16,9 +16,7 @@ const DashboardPage = () => {
 			<main className="container mx-auto mt-6">
 				<TopSection />
 				<MiddleSection />
-				{/* <TopInfo />
-        <MiddleInfo />
-        <BottomInfo /> */}
+				<BottomSection />
 			</main>
 		</div>
 	);
